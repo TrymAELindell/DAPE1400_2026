@@ -6,7 +6,7 @@ public class FullNameWithAge {
         String firstName = JOptionPane.showInputDialog("Skriv inn fornavnet ditt");
         String lastName = JOptionPane.showInputDialog("Skriv inn etternavnet ditt");
         // The age is only shown, never calculated with, so keeping it as a
-        // String is fine here. Exercise 6 shows the conversion to int.
+        // String is fine here. Exercise 10 shows the conversion to int.
         String age = JOptionPane.showInputDialog("Skriv inn alderen din");
 
         String fullName = firstName + " " + lastName;

@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-// Reference solution for exercise 8.
+// Reference solution for exercise 13.
 public class AverageOfThreeDecimals {
     public static void main(String[] args) {
         String input1 = JOptionPane.showInputDialog("Skriv inn det første desimaltallet");

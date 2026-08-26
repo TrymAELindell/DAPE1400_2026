@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-// Reference solution for exercise 9.
+// Reference solution for exercise 14.
 public class AverageWithTryCatch {
     public static void main(String[] args) {
         String input1 = JOptionPane.showInputDialog("Skriv inn det første desimaltallet");
@@ -12,8 +12,8 @@ public class AverageWithTryCatch {
         double number3;
         // If any of the three inputs is not a number, parseDouble throws an
         // exception, and the catch block sets all three values to 0 as the
-        // exercise asks. (An alternative is one try-catch per input, which
-        // would keep the values that could be converted.)
+        // exercise asks. Exercise 16 is the version with one try-catch per
+        // input, which keeps the values that could be converted.
         try {
             number1 = Double.parseDouble(input1);
             number2 = Double.parseDouble(input2);

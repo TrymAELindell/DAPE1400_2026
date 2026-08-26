@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-// Reference solution for exercise 6.
+// Reference solution for exercise 10.
 public class AgeAsNumber {
     public static void main(String[] args) {
         // Input always arrives as a String, so reading a whole number is a

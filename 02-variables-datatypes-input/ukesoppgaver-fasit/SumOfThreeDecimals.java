@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-// Reference solution for exercise 7.
+// Reference solution for exercise 12.
 public class SumOfThreeDecimals {
     public static void main(String[] args) {
         String input1 = JOptionPane.showInputDialog("Skriv inn det første desimaltallet");
