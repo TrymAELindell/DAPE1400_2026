@@ -3,5 +3,10 @@
 
 Prøv selv først — bruk fasiten til å sjekke løsningen din etterpå.
 
-Hver oppgave har sin egen mappe. `oppgave-NN/`. Når du skal løse oppgavene selv bør du lage ett nytt prosjekt for hver oppgave. Her ligger `.java`-filene ligger i `src/`, slik de også skal gjøre hos deg i dine prosjekter som tilhører oppgavene du løser. 
+Hver oppgave har sin egen mappe: `oppgave-NN/` er fasit til oppgave NN.
+Mappen tilsvarer prosjektmappen i ditt eget IntelliJ-prosjekt:
+`.java`-filene ligger i `src/`, slik de også skal gjøre hos deg. IntelliJ
+lager resten av prosjektmappene (`.idea`, `out`) selv — de hører ikke
+hjemme i fasiten.
 
+En oppgave uten egen mappe har svaret sitt i selve oppgavearket.
