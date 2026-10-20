@@ -307,9 +307,10 @@ Minste tall: 2
 
 ### Oppgave 15
 
-Skriv en metode `copyArray` som tar imot en heltallsarray og returnerer
-en *ny* array med samme innhold, kopiert element for element med en
-loop. Test metoden: Kopier arrayen 1, 2, 3, sett det første elementet i
+Skriv en metode `copyArray` i en egen klasse `ArrayCopier`. Metoden tar
+imot en heltallsarray og returnerer en *ny* array med samme innhold,
+kopiert element for element med en loop. Test metoden fra `main`:
+Kopier arrayen 1, 2, 3, sett det første elementet i
 kopien til 100, og skriv ut det første elementet i originalen og i
 kopien, hvert på sin linje.
 
@@ -353,11 +354,11 @@ egen array og originalen fikk være i fred.
 
 ### Oppgave 17
 
-Skriv en metode `doubleAll` som tar imot en heltallsarray og dobler
-hvert element — metoden skal ikke returnere noe. Kall metoden med
-arrayen 1, 2, 3, og skriv deretter ut elementene med en for-each-loop,
-hvert på sin linje. Legg merke til at endringene metoden gjorde, er
-synlige etterpå — metoden og `main` arbeider med samme array.
+Skriv en metode `doubleAll` i en egen klasse `ArrayDoubler`. Metoden
+tar imot en heltallsarray og dobler hvert element — metoden skal ikke
+returnere noe. Kall metoden fra `main` med arrayen 1, 2, 3, og skriv
+deretter ut elementene med en for-each-loop, hvert på sin linje. Legg
+merke til at endringene metoden gjorde, er synlige etterpå — metoden og `main` arbeider med samme array.
 
 <details markdown="1">
 <summary>Forventet utskrift</summary>
@@ -372,9 +373,10 @@ synlige etterpå — metoden og `main` arbeider med samme array.
 
 ### Oppgave 18
 
-Skriv en metode `sumOf` som tar imot en heltallsarray og returnerer
-summen av elementene. Kall metoden med to forskjellige arrayer — 1 til
-9 fra oppgave 1, og 40, 25, 20, 15 — og skriv ut begge summene, hver på
+Skriv en metode `calculateSum` i en egen klasse `SumCalculator`.
+Metoden tar imot en heltallsarray og returnerer summen av elementene.
+Kall metoden fra `main` med to forskjellige arrayer — 1 til 9 fra
+oppgave 1, og 40, 25, 20, 15 — og skriv ut begge summene, hver på
 sin linje, på formen «Summen av den første arrayen er ‹summen›».
 
 <details markdown="1">
@@ -389,9 +391,10 @@ Summen av den andre arrayen er 100
 
 ### Oppgave 19
 
-Skriv en metode `makeNumberedArray` som tar imot en lengde, oppretter
-en ny heltallsarray med den lengden, fyller den med tallene fra 1 og
-oppover med en loop, og returnerer den. Kall metoden med lengden 5, og
+Skriv en metode `makeNumberedArray` i en egen klasse `ArrayMaker`.
+Metoden tar imot en lengde, oppretter en ny heltallsarray med den
+lengden, fyller den med tallene fra 1 og oppover med en loop, og
+returnerer den. Kall metoden fra `main` med lengden 5, og
 skriv ut elementene i arrayen du får tilbake med en for-each-loop,
 hvert på sin linje.
 
@@ -722,7 +725,7 @@ Hva gjør metoden `mystery`? Beskriv det med én setning. Bestem deg for
 et svar før du åpner fasiten.
 
 ```java
-public class MysteryMethod {
+public class ArrayTools {
     public static int mystery(int[] numbers) {
         int result = numbers[0];
         for (int number : numbers) {
@@ -732,10 +735,14 @@ public class MysteryMethod {
         }
         return result;
     }
+}
+```
 
+```java
+public class Main {
     public static void main(String[] args) {
         int[] measurements = {12, 7, 19, 3, 8};
-        System.out.println(mystery(measurements));
+        System.out.println(ArrayTools.mystery(measurements));
     }
 }
 ```
@@ -788,7 +795,7 @@ Hva skriver programmet ut? Bestem deg for et svar før du åpner fasiten.
 ```java
 import java.util.Arrays;
 
-public class EqualsVersusOperator {
+public class Main {
     public static void main(String[] args) {
         int[] a = {1, 2, 3};
         int[] b = {1, 2, 3};

@@ -318,7 +318,7 @@ Skriv av programmet under. Hva tror du de to sammenlikningene skriver ut?
 Bestem deg for et svar *før* du kjører programmet — og kjør det så.
 
 ```java
-public class IntegerComparison {
+public class Main {
     public static void main(String[] args) {
         Integer a = 1000;
         Integer b = 1000;

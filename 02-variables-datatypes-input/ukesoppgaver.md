@@ -504,7 +504,7 @@ Programmet under kompilerer ikke. Hva er feilen, og hvordan retter du den?
 Bestem deg for et svar før du åpner fasiten.
 
 ```java
-public class Greeting {
+public class Main {
     public static void main(String[] args) {
         String firstName = "Ole";
         String lastname = "Olsen";
@@ -599,7 +599,7 @@ Bestem deg for et svar før du åpner fasiten.
 ```java
 import javax.swing.JOptionPane;
 
-public class Greeting {
+public class Main {
     public static void main(String[] args) {
         String name = JOptionPane.showInputDialog("Hva heter du?");
         String output = "Hei på deg " + name;

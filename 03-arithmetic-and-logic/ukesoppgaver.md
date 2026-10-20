@@ -1007,7 +1007,7 @@ før du åpner fasiten.
 ```java
 import javax.swing.JOptionPane;
 
-public class YearCheck {
+public class Main {
     public static void main(String[] args) {
         String yearInput = JOptionPane.showInputDialog("Skriv inn et årstall");
         int year = Integer.parseInt(yearInput);

@@ -157,7 +157,7 @@ klassen `Account`. Også her skal du erstatte kommentarene med Java-kode.
 ```java
 // nødvendig(e) import-setning(er)
 
-public class Bank
+public class Main
 {
     public static void main(String[] args)
     {
@@ -170,10 +170,10 @@ public class Bank
            kontoinformasjon. */
 
     }
-} // end of class Bank
+} // end of class Main
 ```
 
-Merk: her må det opprettes to `.java`-filer — `Bank.java` og `Account.java`.
+Merk: her må det opprettes to `.java`-filer — `Main.java` og `Account.java`.
 
 For Natalia Kovalenko med kontonummer 1234.56.78901 og 1000 kr i saldo, et
 innskudd på 500, et uttak på 200 og et uttak på 1 000 000, skal utskriften
@@ -584,7 +584,7 @@ Nå skal `Tax` fra oppgave 14 flyttes inn i sin egen pakke.
 1. Lag pakka `pricing` i prosjektet (i IntelliJ: *New → Package*).
 2. Flytt `Tax` inn i den, og sett `package pricing;` som første linje i
    fila. Fila skal ligge i mappa `pricing`.
-3. Lag en ny klasse `PricingMain` **utenfor** pakka, som importerer `Tax`
+3. Lag en ny klasse `Main` **utenfor** pakka, som importerer `Tax`
    med `import pricing.Tax;` og regner ut den samme prisen som i oppgave 14.
 
 Fjern importen et øyeblikk og se hva kompilatoren sier — sett den så
@@ -603,8 +603,8 @@ Passasjeravgift: 60.0
 
 ### Oppgave 17
 
-Lag en kopi av `PricingMain` fra oppgave 16 som heter
-`PricingStaticImportMain`, og bytt ut importen med en statisk import:
+Lag et nytt prosjekt med en kopi av `Main` fra oppgave 16, og bytt ut
+importen med en statisk import:
 
     import static pricing.Tax.computeVAT;
     import static pricing.Tax.getPassengerFee;
@@ -633,28 +633,28 @@ Lag to klasser til inne i pakka `pricing`:
 - `FeeReport`, med en `public static` metode `describeFees` som returnerer
   en tekst med både passasjeravgiften fra `Tax` og gebyret fra `FeeTable`.
 
-Lag så `FeeMain` **utenfor** pakka, som skriver ut resultatet av
+Lag så `Main` **utenfor** pakka, som skriver ut resultatet av
 `FeeReport.describeFees()`.
 
-Prøv til slutt å kalle `FeeTable.getHandlingFee()` direkte fra `FeeMain`.
+Prøv til slutt å kalle `FeeTable.getHandlingFee()` direkte fra `Main`.
 **Gjett hva som skjer, før du prøver.**
 
 <details markdown="1">
 <summary>Fasit</summary>
 
-`FeeMain` skriver ut:
+`Main` skriver ut:
 
 ```text
 Passasjeravgift: 60.0 kr
 Gebyr: 15.0 kr
 ```
 
-Kallet på `FeeTable.getHandlingFee()` fra `FeeMain` kompilerer ikke:
+Kallet på `FeeTable.getHandlingFee()` fra `Main` kompilerer ikke:
 `getHandlingFee() is not public in pricing.FeeTable; cannot be accessed from
 outside package`.
 
 Metoden uten tilgangsnivå er package-private. `FeeReport` ligger i samme
-pakke og når den uten videre; `FeeMain` ligger utenfor og ser den ikke i det
+pakke og når den uten videre; `Main` ligger utenfor og ser den ikke i det
 hele tatt. Det er slik en pakke kan ha hjelpeklasser som resten av
 programmet ikke skal bry seg med — og det er den tomme raden i oversikten
 over tilgangsnivåer fra modul 04.
@@ -1177,7 +1177,7 @@ kompilerer ikke. Hva er feilen, og hva er de to måtene å rette den på? Bestem
 deg for et svar før du åpner fasiten.
 
 ```java
-public class TicketPriceMain {
+public class Main {
     public static void main(String[] args) {
         double vat = Tax.computeVAT(100.0);
         System.out.println("Moms: " + vat);
@@ -1237,7 +1237,7 @@ og denne klassen ligger **utenfor** pakka:
 ```java
 import rates.RateTable;
 
-public class RateMain {
+public class Main {
     public static void main(String[] args) {
         System.out.println(RateTable.getPassengerFee());   // linje B
         System.out.println(RateTable.getHandlingFee());    // linje C
@@ -1257,7 +1257,7 @@ Linje A og B kompilerer; linje C gjør det ikke.
   metodene — også den uten tilgangsnivå.
 - **B**: `getPassengerFee` er `public`, altså synlig for alle.
 - **C**: `getHandlingFee` har ikke noe tilgangsnivå foran seg — den er
-  package-private, synlig bare inne i `rates`. `RateMain` ligger utenfor
+  package-private, synlig bare inne i `rates`. `Main` ligger utenfor
   og ser den ikke.
 
 Merk at det ikke hjelper å importere `RateTable`: importen sier bare hvor

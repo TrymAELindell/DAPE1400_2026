@@ -5,7 +5,8 @@ flere oppgaver her enn én ukes arbeid — resten er repetisjon.
 
 Ukas kodeeksempler ligger på
 <https://github.com/TrymAELindell/DAPE1400_2026/tree/main/06-control-structures/repetisjon-kode>.
-Se på dem hvis du står fast — oppgave 41 bruker `DoubleLoop.java` direkte.
+Se på dem hvis du står fast — oppgave 41 bruker prosjektet `DoubleLoop`
+direkte.
 
 Fasit til oppgavene ligger på
 <https://github.com/TrymAELindell/DAPE1400_2026/tree/main/06-control-structures/ukesoppgaver-fasit>.
@@ -928,7 +929,13 @@ et svar før du åpner fasiten.
 double weight;
 do {
     String input = showInputDialog("Skriv inn vekta i kg (0,1–20):");
-    weight = Double.parseDouble(input);
+    try {
+        weight = Double.parseDouble(input);
+    } catch (Exception e) {
+        // 0 is not a valid weight, so the loop asks again.
+        weight = 0;
+        showMessageDialog(null, "Du må skrive inn et tall. Prøv igjen.");
+    }
 } while (weight < 0.1 || weight > 20);
 ```
 
@@ -937,6 +944,8 @@ do {
 
 Loopen leser inn en vekt og spør på nytt helt til svaret er gyldig — fra og
 med 0,1 til og med 20 kg.
+Skriver brukeren noe som ikke er et tall, setter `catch`-blokken `weight`
+til 0. Heller ikke 0 er en gyldig vekt, så loopen spør igjen.
 
 Blokka *må* kjøres minst én gang, for før den første innlesingen finnes det
 ingen vekt å teste. Det er typetilfellet for `do-while`: spør minst én
@@ -947,7 +956,7 @@ lenge vekta er *ugyldig*» — under minstegrensa *eller* over maksgrensa.
 
 ### Oppgave 41
 
-Åpne `DoubleLoop.java` fra ukas kodeeksempler og kjør programmet med
+Åpne `DoubleLoop/src/Main.java` fra ukas kodeeksempler og kjør programmet med
 **debuggeren**:
 
 1. Sett et breakpoint på `System.out.print`-linja i den *indre* loopen.

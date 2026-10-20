@@ -19,7 +19,7 @@ Prøv selv først — bruk fasiten til å sjekke løsningen din etterpå.
 Lag klassen `Song` med to fields: `title` og `artist`, begge strenger.
 Klassen skal ikke ha noen konstruktør eller metoder ennå.
 
-Lag så klassen `SongMain` med en `main`-metode som instansierer ett
+Lag så klassen `Main` med en `main`-metode som instansierer ett
 `Song`-objekt, gir begge fieldene verdier direkte med punktum, og skriver
 dem ut med `System.out.println` — én linje per field, med en ledetekst
 foran verdien. For sangen «Nordnorsk vise» av Halvdan Sivertsen skal
@@ -56,7 +56,7 @@ Klassen skal ha:
 - en metode `printBookInfo` som skriver ut en overskrift og deretter hvert
   field på sin egen linje, med en ledetekst foran verdien
 
-Skriv så koden i `main` (i en egen klasse `BookMain`) som trengs for å
+Skriv så koden i `main` (i en egen klasse `Main`) som trengs for å
 opprette et `Book`-objekt og kalle `printBookInfo` på det. For boka «Sofies
 verden» av Jostein Gaarder, som koster 249 kroner og har ISBN
 82-03-26000-6, skal utskriften bli:
